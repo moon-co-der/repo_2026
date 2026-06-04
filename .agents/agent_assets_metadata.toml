@@ -1,0 +1,26 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "eeZ4l6bip8bWHAlE_4PwR"
+uri = "file://artifacts/enterprise-site/public/hero.png"
+type = "image"
+title = "Hero office team"
+
+[[generated]]
+id = "jFfoYorclYSV0h5_ciIYt"
+uri = "file://artifacts/enterprise-site/public/about.png"
+type = "image"
+title = "About us boardroom"
+
+[[generated]]
+id = "tMG0CmtfeQAgDTXHvezuF"
+uri = "file://artifacts/enterprise-site/public/tech.png"
+type = "image"
+title = "Tech infrastructure"
+
+[[generated]]
+id = "fMlRYU75JESFV-fkyDk74"
+uri = "file://artifacts/enterprise-site/public/contact.png"
+type = "image"
+title = "Contact boardroom"
