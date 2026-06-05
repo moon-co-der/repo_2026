@@ -1,0 +1,59 @@
+Update the website to make it more professional, enterprise-grade, and client-focused.
+
+1. Remove the entire "What Our Clients Say" testimonial carousel section.
+   - Remove all testimonials, quotes, ratings, author names, arrows, and slider dots.
+   - Do not replace it with another testimonial section.
+
+2. Visit https://www.neesoft.com/ and collect all client companies/logos displayed on the existing website.
+
+3. Create a new section called:
+
+   Trusted By Leading Organizations
+
+   Description:
+   We are proud to partner with businesses across industries, delivering reliable software solutions that drive growth, efficiency, and innovation.
+
+4. Display all client logos in a professional responsive grid:
+   - 5-6 logos per row on desktop
+   - 3-4 logos per row on tablet
+   - 2 logos per row on mobile
+   - Equal logo sizing
+   - Proper spacing and alignment
+   - Subtle hover effect
+   - Clean white or light-gray background
+
+5. Update the Contact Us section across the website with the following information:
+
+   Phone:
+   +91 9840173006
+
+   Email:
+   kalai@neesoft.com
+
+   Address:
+   Third Floor, No:3, Velachery Bypass Rd,
+   Shashi Nagar, Velachery,
+   Chennai, Tamil Nadu 600042
+
+6. Improve the Contact section:
+   - Add phone, email, and location icons
+   - Make phone number clickable
+   - Make email clickable
+   - Add a Google Maps embed using the address
+   - Use a clean professional layout
+   - Fully responsive on mobile, tablet, and desktop
+
+7. Review the entire website and ensure:
+   - Professional enterprise design
+   - Consistent spacing and alignment
+   - Modern typography using Inter font
+   - Better visual hierarchy
+   - Improved responsiveness
+   - Clean corporate appearance
+
+8. Follow the design style of Microsoft, IBM, Infosys, Accenture, Deloitte, and Cognizant websites.
+
+9. Avoid generic placeholder content, fake testimonials, excessive animations, oversized text, and flashy effects.
+
+Goal:
+Transform the website into a professional software company website that builds trust, showcases all NeeSoft clients, and clearly presents company contact information for potential customers.
