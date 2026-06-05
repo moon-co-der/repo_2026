@@ -37,7 +37,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2">
           <Box className={`w-6 h-6 ${isTransparent ? "text-white" : "text-primary"}`} />
-          <span className={`font-heading font-bold text-2xl tracking-tight ${isTransparent ? "text-white" : "text-primary"}`}>
+          <span className={`font-semibold text-lg tracking-tight ${isTransparent ? "text-white" : "text-primary"}`}>
             NeeSoft
           </span>
         </Link>
@@ -58,7 +58,7 @@ export function Navbar() {
             </Link>
           ))}
           <Link href="/contact" data-testid="nav-contact-btn">
-            <Button className="bg-[#103152] hover:bg-[#103152]/90 text-white transition-transform hover:scale-105">
+            <Button className="bg-[#103152] hover:bg-[#103152]/90 text-white text-sm">
               Contact Us
             </Button>
           </Link>
@@ -86,7 +86,7 @@ export function Navbar() {
               key={link.path}
               href={link.path}
               onClick={() => setIsMobileMenuOpen(false)}
-              className={`py-3 text-lg font-medium border-b border-gray-100 ${
+              className={`py-3 text-base font-medium border-b border-gray-100 ${
                 location === link.path ? "text-blue-500" : "text-foreground"
               }`}
             >

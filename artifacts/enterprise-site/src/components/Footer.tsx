@@ -5,14 +5,14 @@ export function Footer() {
     <footer className="bg-[#103152] text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
         <div>
-          <h3 className="font-heading font-bold text-2xl mb-4">NeeSoft Private Limited</h3>
-          <p className="text-white/80 max-w-sm">
+          <h3 className="font-semibold text-base mb-3">NeeSoft Private Limited</h3>
+          <p className="text-white/65 text-sm max-w-sm leading-relaxed">
             Engineering Software Solutions That Drive Business Growth.
           </p>
         </div>
         
         <div>
-          <h4 className="font-heading font-semibold text-lg mb-4">Quick Links</h4>
+          <h4 className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-4">Quick Links</h4>
           <ul className="space-y-2">
             <li><Link href="/" className="text-white/80 hover:text-white transition-colors">Home</Link></li>
             <li><Link href="/about" className="text-white/80 hover:text-white transition-colors">About Us</Link></li>
@@ -23,8 +23,8 @@ export function Footer() {
         </div>
         
         <div>
-          <h4 className="font-heading font-semibold text-lg mb-4">Contact Info</h4>
-          <ul className="space-y-2 text-white/80">
+          <h4 className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-4">Contact Info</h4>
+          <ul className="space-y-2 text-white/65 text-sm">
             <li>info@neesoft.com</li>
             <li>+91 XXXXX XXXXX</li>
             <li>Chennai, Tamil Nadu, India</li>

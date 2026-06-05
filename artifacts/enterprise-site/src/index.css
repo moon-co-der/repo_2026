@@ -122,8 +122,8 @@
   --chart-4: 213 67% 12%;
   --chart-5: 0 0% 100%;
 
-  --app-font-sans: 'Inter', sans-serif;
-  --app-font-heading: 'Plus Jakarta Sans', sans-serif;
+  --app-font-sans: 'Inter', 'Segoe UI', sans-serif;
+  --app-font-heading: 'Inter', 'Segoe UI', sans-serif;
   --app-font-serif: Georgia, serif;
   --app-font-mono: Menlo, monospace;
   --radius: 0.25rem;
