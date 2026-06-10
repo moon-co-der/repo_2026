@@ -35,7 +35,15 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="flex items-center">
+        <Link 
+          href="/" 
+          className="flex items-center"
+          onClick={() => {
+            if (window.location.pathname === "/") {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+          }}
+        >
           <img
             src="/neesoft-logo.png"
             alt="NeeSoft"
@@ -54,6 +62,11 @@ export function Navbar() {
                   ? isTransparent ? "text-white" : "text-[#103152]"
                   : isTransparent ? "text-white/80 hover:text-white" : "text-gray-600 hover:text-[#103152]"
               }`}
+              onClick={() => {
+                if (window.location.pathname === link.path) {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+              }}
             >
               {link.name}
             </Link>
@@ -86,7 +99,12 @@ export function Navbar() {
             <Link
               key={link.path}
               href={link.path}
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                if (window.location.pathname === link.path) {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+              }}
               className={`py-3 text-sm font-medium border-b border-gray-50 ${
                 location === link.path ? "text-[#103152]" : "text-gray-600"
               }`}

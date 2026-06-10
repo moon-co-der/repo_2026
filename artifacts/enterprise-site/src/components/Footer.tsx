@@ -48,9 +48,9 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <a href="mailto:kalai@neesoft.com" className="flex items-start gap-2.5 text-white/65 hover:text-white transition-colors">
+              <a href="mailto:neesoft.support@gmail.com" className="flex items-start gap-2.5 text-white/65 hover:text-white transition-colors">
                 <Mail className="w-4 h-4 mt-0.5 shrink-0" />
-                <span>kalai@neesoft.com</span>
+                <span>neesoft.support@gmail.com</span>
               </a>
             </li>
             <li className="flex items-start gap-2.5 text-white/65">

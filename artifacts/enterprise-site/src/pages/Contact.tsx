@@ -9,13 +9,18 @@ import { Label } from "@/components/ui/label";
 
 const PHONE = "+91 98401 73006";
 const PHONE_HREF = "tel:+919840173006";
-const EMAIL = "moonlovers.abc@gmail.com";
+const EMAIL = "neesoft.support@gmail.com";
 const ADDRESS_LINE1 = "Third Floor, No:3, Velachery Bypass Rd,";
 const ADDRESS_LINE2 = "Shashi Nagar, Velachery,";
 const ADDRESS_LINE3 = "Chennai, Tamil Nadu 600042";
 const MAPS_EMBED =
   "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7775.6061808042905!2d80.22327159999999!3d12.984442699999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d907b12735b%3A0x1966c9468e235573!2sNeesoft!5e0!3m2!1sen!2sin!4v1780723571221!5m2!1sen!2sin";
-const WEB3FORMS_ACCESS_KEY = "73862ec1-3d2c-430e-a172-0f61afcb524c"; // Replace with your Web3Forms access key
+
+// EmailJS Credentials
+import emailjs from '@emailjs/browser';
+const EMAILJS_SERVICE_ID = "service_1t0ksob";
+const EMAILJS_TEMPLATE_ID = "template_hbgzv0h";
+const EMAILJS_PUBLIC_KEY = "z8Z3Luvpskx1Q5ybN";
 
 export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -30,25 +35,23 @@ export default function Contact() {
     setIsPending(true);
 
     try {
-      const formData = new FormData(formRef.current);
-      formData.append("access_key", WEB3FORMS_ACCESS_KEY);
-
-      if (WEB3FORMS_ACCESS_KEY === "73862ec1-3d2c-430e-a172-0f61afcb524c") {
+      if (EMAILJS_TEMPLATE_ID === "template_id_here" || EMAILJS_PUBLIC_KEY === "public_key_here") {
         // Fallback for demonstration if credentials are not set
-        console.warn("Web3Forms access key not set. Simulating success...");
+        console.warn("EmailJS credentials not fully set. Simulating success...");
         await new Promise(resolve => setTimeout(resolve, 800));
         setIsSubmitted(true);
       } else {
-        const response = await fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          body: formData,
-        });
-        const data = await response.json();
+        const result = await emailjs.sendForm(
+          EMAILJS_SERVICE_ID,
+          EMAILJS_TEMPLATE_ID,
+          formRef.current,
+          EMAILJS_PUBLIC_KEY
+        );
 
-        if (data.success) {
+        if (result.text === 'OK') {
           setIsSubmitted(true);
         } else {
-          throw new Error(data.message || "Submission failed");
+          throw new Error("Submission failed");
         }
       }
     } catch (error) {
