@@ -227,39 +227,67 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── Technology Stack ── */}
-      <section className="py-16 bg-[#F8FAFC] border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      {/* ── Technology Expertise ── */}
+      <section className="py-16 relative overflow-hidden" style={{ background: "linear-gradient(160deg, #0B1220 0%, #0f1f36 50%, #1E293B 100%)" }}>
+
+        {/* Background glow orbs */}
+        <div className="absolute top-0 left-1/4 w-[500px] h-[300px] pointer-events-none" style={{ background: "radial-gradient(ellipse, rgba(37,99,235,0.1) 0%, transparent 70%)", filter: "blur(40px)" }} />
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[250px] pointer-events-none" style={{ background: "radial-gradient(ellipse, rgba(56,189,248,0.07) 0%, transparent 70%)", filter: "blur(40px)" }} />
+        <div className="absolute inset-0 pointer-events-none opacity-[0.025]" style={{ backgroundImage: "radial-gradient(rgba(148,163,184,1) 1px, transparent 1px)", backgroundSize: "28px 28px" }} />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-[#2563EB] mb-2">Technology Expertise</p>
-            <h2 className="text-[1.25rem] md:text-[1.75rem] font-bold text-[#0f172a] mb-2">Our Technology Stack</h2>
-            <p className="text-[0.875rem] text-[#64748b] max-w-lg mx-auto">
-              We work with industry-leading technologies to deliver robust, scalable, and future-proof solutions.
+            <span className="inline-flex items-center gap-1.5 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-[#60a5fa] border border-[#60a5fa]/25 bg-[#60a5fa]/8 px-3 py-1 rounded mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#60a5fa]" />
+              Technology Expertise
+            </span>
+            <h2 className="text-[1.25rem] md:text-[1.875rem] font-bold text-white mb-3">Our Technology Expertise</h2>
+            <p className="text-[0.875rem] text-white/45 max-w-lg mx-auto leading-relaxed">
+              We work with industry-leading technologies to deliver robust, scalable, and future-proof solutions for enterprise clients.
             </p>
           </div>
 
-          {/* Category sections */}
-          <div className="space-y-10">
+          <div className="space-y-8">
             {techStack.map((group) => (
               <div key={group.category}>
-                <h3 className="text-[0.7rem] font-bold uppercase tracking-[0.14em] text-[#94a3b8] mb-4">{group.category}</h3>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="h-px flex-1" style={{ background: "linear-gradient(90deg, rgba(37,99,235,0.4), transparent)" }} />
+                  <span className="text-[0.68rem] font-bold uppercase tracking-[0.16em] text-[#60a5fa]/70">{group.category}</span>
+                  <div className="h-px flex-1" style={{ background: "linear-gradient(90deg, transparent, rgba(37,99,235,0.4))" }} />
+                </div>
                 <div className="flex flex-wrap gap-3">
                   {group.items.map((tech) => (
                     <motion.div
                       key={tech.name}
-                      initial={{ opacity: 0, scale: 0.95 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
+                      initial={{ opacity: 0, y: 8 }}
+                      whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
-                      whileHover={{ y: -2, boxShadow: "0 4px 12px rgba(0,0,0,0.08)" }}
-                      className="flex items-center gap-2.5 bg-white border border-gray-100 rounded-lg px-4 py-3 cursor-default transition-colors hover:border-gray-200"
+                      className="flex items-center gap-2.5 px-4 py-2.5 rounded-lg cursor-default transition-all duration-200 group"
+                      style={{
+                        background: "rgba(255,255,255,0.04)",
+                        border: "1px solid rgba(255,255,255,0.08)",
+                        backdropFilter: "blur(8px)"
+                      }}
+                      onMouseEnter={(e) => {
+                        const el = e.currentTarget as HTMLDivElement;
+                        el.style.borderColor = "rgba(37,99,235,0.5)";
+                        el.style.background = "rgba(37,99,235,0.08)";
+                        el.style.boxShadow = "0 0 16px rgba(37,99,235,0.2)";
+                      }}
+                      onMouseLeave={(e) => {
+                        const el = e.currentTarget as HTMLDivElement;
+                        el.style.borderColor = "rgba(255,255,255,0.08)";
+                        el.style.background = "rgba(255,255,255,0.04)";
+                        el.style.boxShadow = "none";
+                      }}
                     >
                       <img
                         src={tech.icon}
                         alt={tech.name}
-                        className="w-6 h-6 object-contain"
+                        className="w-5 h-5 object-contain"
                         onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
                       />
-                      <span className="text-[0.8125rem] font-semibold text-[#334155]">{tech.name}</span>
+                      <span className="text-[0.8125rem] font-medium text-white/70 group-hover:text-white transition-colors">{tech.name}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -268,25 +296,43 @@ export default function About() {
           </div>
 
           {/* Full logo grid */}
-          <div className="mt-14 pt-10 border-t border-gray-200">
-            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-[#94a3b8] text-center mb-8">All Technologies</p>
-            <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-4">
-              {allTech.map((tech) => (
+          <div className="mt-14 pt-10" style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }}>
+            <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/25 text-center mb-8">All Technologies At A Glance</p>
+            <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-3">
+              {allTech.map((tech, idx) => (
                 <motion.div
                   key={tech.name}
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
-                  whileHover={{ y: -3 }}
-                  className="flex flex-col items-center gap-1.5 p-3 bg-white rounded-lg border border-gray-100 hover:border-gray-200 hover:shadow-sm transition-all cursor-default"
+                  transition={{ delay: idx * 0.02 }}
+                  className="flex flex-col items-center gap-1.5 p-3 rounded-lg cursor-default transition-all duration-200"
+                  style={{
+                    background: "rgba(255,255,255,0.03)",
+                    border: "1px solid rgba(255,255,255,0.06)"
+                  }}
+                  onMouseEnter={(e) => {
+                    const el = e.currentTarget as HTMLDivElement;
+                    el.style.borderColor = "rgba(37,99,235,0.45)";
+                    el.style.background = "rgba(37,99,235,0.07)";
+                    el.style.boxShadow = "0 0 14px rgba(37,99,235,0.18)";
+                    el.style.transform = "translateY(-2px)";
+                  }}
+                  onMouseLeave={(e) => {
+                    const el = e.currentTarget as HTMLDivElement;
+                    el.style.borderColor = "rgba(255,255,255,0.06)";
+                    el.style.background = "rgba(255,255,255,0.03)";
+                    el.style.boxShadow = "none";
+                    el.style.transform = "translateY(0)";
+                  }}
                 >
                   <img
                     src={tech.icon}
                     alt={tech.name}
-                    className="w-8 h-8 object-contain"
+                    className="w-7 h-7 object-contain"
                     onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
                   />
-                  <span className="text-[0.6rem] font-medium text-[#64748b] text-center leading-tight">{tech.name}</span>
+                  <span className="text-[0.58rem] font-medium text-white/40 text-center leading-tight">{tech.name}</span>
                 </motion.div>
               ))}
             </div>
