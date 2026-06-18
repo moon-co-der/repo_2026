@@ -1,0 +1,177 @@
+Redesign the entire NeeSoft website to follow a modern enterprise corporate style similar to Infosys, Accenture, TCS, IBM, Deloitte, or Cognizant.
+
+GENERAL DESIGN REQUIREMENTS
+
+• Remove the large hero background image completely.
+• Remove oversized headings and large typography.
+• Use a clean white background throughout the site.
+• Use Inter font everywhere.
+• Use a professional color palette:
+  - Navy Blue (#103152)
+  - Dark Gray (#334155)
+  - Light Gray (#F8FAFC)
+  - White (#FFFFFF)
+  - Accent Blue (#2563EB)
+
+• Add generous white space.
+• Use clean cards with subtle shadows.
+• Use modern hover effects only.
+• Remove decorative grids, overlays, and flashy effects.
+• Ensure the website is fully responsive.
+
+--------------------------------------------------
+
+HOME PAGE
+
+Create a professional hero section.
+
+Headline:
+"Digital Solutions for Modern Businesses"
+
+Subheadline:
+"NeeSoft helps organizations transform ideas into scalable digital products through custom software development, enterprise applications, cloud solutions, and technology consulting."
+
+Buttons:
+• Get In Touch
+• Explore Services
+
+Below the hero section add:
+
+1. Trusted By Leading Organizations
+   - Clean logo strip
+   - Professional grayscale logos
+
+2. Services Section
+   - Custom Software Development
+   - Enterprise Applications
+   - Mobile App Development
+   - Cloud Solutions
+   - AI & Automation
+   - Technology Consulting
+
+3. Why Choose NeeSoft
+   - Years of Industry Experience
+   - Enterprise Grade Solutions
+   - Dedicated Support
+   - Agile Development Process
+
+4. Call To Action Section
+
+--------------------------------------------------
+
+ABOUT US PAGE
+
+Completely redesign the About Us page to look professional and enterprise-focused.
+
+Sections:
+
+1. Company Introduction
+
+Title:
+"About NeeSoft"
+
+Content:
+"NeeSoft is a technology solutions company focused on delivering innovative software products, enterprise applications, mobile solutions, and digital transformation services for businesses across industries."
+
+2. Mission & Vision
+
+Mission:
+"To empower organizations through reliable and scalable technology solutions."
+
+Vision:
+"To become a trusted global technology partner delivering meaningful business transformation."
+
+3. Company Values
+
+• Innovation
+• Integrity
+• Excellence
+• Customer Success
+
+Display these in professional icon cards.
+
+4. Technology Expertise Section
+
+Create a visually attractive section similar to leading IT company websites.
+
+Title:
+"Our Technology Stack"
+
+Display technologies in modern cards or logo tiles arranged in a responsive grid.
+
+Frontend:
+• React
+• Angular
+• JavaScript
+• HTML5
+• CSS3
+
+Backend:
+• Node.js
+• PHP
+• Laravel
+• CodeIgniter
+• .NET
+
+Mobile:
+• Swift
+• Objective-C
+
+Cloud & DevOps:
+• AWS
+• Azure
+• Google Cloud
+• Firebase
+
+Database:
+• MySQL
+• PostgreSQL
+• MongoDB
+• MariaDB
+
+Other:
+• Apache
+• REST APIs
+
+Requirements:
+• Use official technology logos.
+• Equal spacing and alignment.
+• Hover animation on each technology card.
+• Clean white background.
+• Professional heading and description.
+• Mobile responsive layout.
+
+5. Why Clients Trust Us
+
+Display statistics cards:
+
+• Successful Projects
+• Industry Experience
+• Client Satisfaction
+• Long-Term Partnerships
+
+6. Closing CTA
+
+Headline:
+"Ready to Build Your Next Digital Solution?"
+
+Button:
+"Contact Our Team"
+
+--------------------------------------------------
+
+FOOTER
+
+Create a professional corporate footer with:
+
+• Company Description
+• Quick Links
+• Services
+• Contact Information
+• Copyright Notice
+
+--------------------------------------------------
+
+FINAL GOAL
+
+The website should look like a premium B2B software company website that can be presented to enterprise clients. Prioritize professionalism, readability, trust, and clean corporate design over flashy visuals.
